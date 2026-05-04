@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: life-coach-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGO_URL
+        sync: false
+      - key: DB_NAME
+        value: emergentdb
+      - key: CORS_ORIGINS
+        sync: false
+      - key: SENDGRID_API_KEY
+        sync: false
+      - key: FROM_EMAIL
+        value: noreply@mindclarity.coach
+      - key: NOTIFICATION_EMAIL
+        value: shivanshu@mindclarity.coach
+      - key: CALCOM_USERNAME
+        value: shivanshu
+      - key: GOOGLE_CALENDAR_LINK
+        sync: false
