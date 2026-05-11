@@ -743,16 +743,10 @@ const LandingPage = () => {
                 What if I'm not satisfied with the coaching?
               </AccordionTrigger>
               <AccordionContent className="text-slate-600 leading-relaxed">
-                Your satisfaction means everything to me—I want this to be a truly transformative investment in your growth.
-
-                Here's my promise to you:
-                - **30-Day Satisfaction Guarantee**: If within the first 30 days of our program, you don't feel we're making meaningful progress or that this is the right fit, you can request a refund for unused sessions.
-                - **First Session Promise**: If after our initial consultation you don't feel a genuine connection or see clear value in continuing, I'll refund 100% of your first session fee—no questions asked.
-                - **Open, Honest Communication**: I'm committed to transparency throughout our journey. If at any point you have concerns or need adjustments to our approach, we'll address them immediately.
-
-                Coaching is a partnership, and I only want to work with people who feel fully supported and excited about our work together. My goal isn't just to keep clients—it's to create real, lasting change. If we're not the right fit, I'll even help you find resources or referrals that might be better suited for your needs.
-
-                You have nothing to lose and everything to gain by taking this first step.
+                Your satisfaction is my priority. I offer a satisfaction guarantee on the first session. 
+                If after our initial consultation you don't feel this is the right fit, I'll provide a 
+                full refund. My goal is to create a transformative experience, and I'm committed to 
+                ensuring you get real value from our work together.
               </AccordionContent>
             </AccordionItem>
 
