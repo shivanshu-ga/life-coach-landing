@@ -62,7 +62,7 @@ REACT_APP_GA_TRACKING_ID = G-XXXXXXXXXX (add tomorrow)
    CORS_ORIGINS = https://your-site.netlify.app
    SENDGRID_API_KEY = SG.xxx (add tomorrow)
    FROM_EMAIL = noreply@mindclarity.coach
-   NOTIFICATION_EMAIL = shivanshu@mindclarity.coach
+   NOTIFICATION_EMAIL = shivanshu.ga@gmail.com
    ```
 5. Copy Railway URL (e.g., `https://your-app.railway.app`)
 6. **Update Netlify:** Add Railway URL to `REACT_APP_BACKEND_URL`
@@ -178,7 +178,7 @@ Solution: Check CORS
 
 **Still stuck?**
 - WhatsApp: +91 72988 88880
-- Email: shivanshu@mindclarity.coach
+- Email: shivanshu.ga@gmail.com
 
 ---
 

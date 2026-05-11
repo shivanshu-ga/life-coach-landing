@@ -795,7 +795,7 @@ const LandingPage = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-emerald-50">shivanshu@mindclarity.coach</p>
+                    <p className="text-emerald-50">shivanshu.ga@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -935,7 +935,7 @@ const LandingPage = () => {
             </div>
             <div>
               <h4 className="font-bold text-lg mb-4">Connect</h4>
-              <p className="text-slate-400 mb-2">shivanshu@mindclarity.coach</p>
+              <p className="text-slate-400 mb-2">shivanshu.ga@gmail.com</p>
               <p className="text-slate-400 mb-4">+91 72988 88880</p>
               <p className="text-slate-400 text-sm">
                 © 2025 Shivanshu Goel. All rights reserved.
@@ -1059,7 +1059,7 @@ const LandingPage = () => {
                     </div>
                     <div className="pt-6 border-t border-slate-200 mt-6">
                       <p className="text-sm text-slate-500">
-                        <strong>Phone:</strong> +91 72988 88880 | <strong>Email:</strong> shivanshu@mindclarity.coach
+                        <strong>Phone:</strong> +91 72988 88880 | <strong>Email:</strong> shivanshu.ga@gmail.com
                       </p>
                     </div>
                   </div>

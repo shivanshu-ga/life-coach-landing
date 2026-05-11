@@ -109,7 +109,7 @@ netlify deploy --prod --dir=build
    CORS_ORIGINS=https://your-site.netlify.app
    SENDGRID_API_KEY=SG.xxxxxxxxxxxxxxx
    FROM_EMAIL=noreply@mindclarity.coach
-   NOTIFICATION_EMAIL=shivanshu@mindclarity.coach
+   NOTIFICATION_EMAIL=shivanshu.ga@gmail.com
    CALCOM_USERNAME=shivanshu
    GOOGLE_CALENDAR_LINK=your-calendar-link
    ```
@@ -220,7 +220,7 @@ netlify deploy --prod --dir=build
 
 3. **Verify Sender Identity**
    - Settings → Sender Authentication
-   - Verify single sender email: `shivanshu@mindclarity.coach`
+   - Verify single sender email: `shivanshu.ga@gmail.com`
    - Or verify your domain (better for production)
 
 4. **Add to Railway Environment Variables**
@@ -364,7 +364,7 @@ If you encounter any issues:
 1. Check logs in Railway/Render dashboard
 2. Check browser console for frontend errors
 3. Test backend API directly: `https://your-app.railway.app/api/`
-4. Contact me at: shivanshu@mindclarity.coach
+4. Contact me at: shivanshu.ga@gmail.com
 
 ---
 

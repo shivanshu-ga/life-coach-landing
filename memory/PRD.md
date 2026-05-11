@@ -126,7 +126,7 @@ Build a landing page for life coach Shivanshu Goel similar to https://lp.drysr.i
 
 ### Contact Information
 - **Phone/WhatsApp**: +91 72988 88880
-- **Email**: shivanshu@mindclarity.coach
+- **Email**: shivanshu.ga@gmail.com
 
 ### Book Links
 - **Amazon**: https://www.amazon.in/s?k=Quiet+the+Chaos+Shivanshu+Goel
