@@ -16,7 +16,7 @@ services:
       - key: FROM_EMAIL
         value: noreply@mindclarity.coach
       - key: NOTIFICATION_EMAIL
-        value: shivanshu.ga@gmail.com
+        value: shivanshu@mindclarity.coach
       - key: CALCOM_USERNAME
         value: shivanshu
       - key: GOOGLE_CALENDAR_LINK
