@@ -10,7 +10,7 @@ class EmailService:
     def __init__(self):
         self.api_key = os.environ.get('SENDGRID_API_KEY')
         self.from_email = os.environ.get('FROM_EMAIL', 'noreply@mindclarity.coach')
-        self.to_email = os.environ.get('NOTIFICATION_EMAIL', 'shivanshu@mindclarity.coach')
+        self.to_email = os.environ.get('NOTIFICATION_EMAIL', 'lifecs.in@gmail.com')
         
     def send_contact_notification(self, name: str, email: str, phone: str, message: str) -> bool:
         """Send email notification when a new contact form is submitted"""
@@ -120,7 +120,7 @@ class EmailService:
                                 </p>
                             </div>
                             <div style="text-align: center; padding: 20px; color: #6b7280; font-size: 12px;">
-                                <p>📞 +91 72988 88880 | 📧 shivanshu@mindclarity.coach</p>
+                                <p>📞 +91 72988 88880 | 📧 lifecs.in@gmail.com</p>
                             </div>
                         </div>
                     </body>

@@ -40,7 +40,7 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 // Get calendar configuration from environment or use defaults
-const CALCOM_USERNAME = process.env.REACT_APP_CALCOM_USERNAME || 'shivanshu';
+const CALENDLY_LINK = process.env.REACT_APP_CALENDLY_LINK || 'https://calendly.com/your-username/30min';
 const GOOGLE_CALENDAR_LINK = process.env.REACT_APP_GOOGLE_CALENDAR_LINK || 'https://calendar.google.com/calendar/appointments';
 
 const LandingPage = () => {
@@ -53,7 +53,7 @@ const LandingPage = () => {
     message: ''
   });
 
-  // Google Analytics
+  // Google Analytics and Calendly widget
   useEffect(() => {
     const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
     
@@ -73,7 +73,36 @@ const LandingPage = () => {
       `;
       document.head.appendChild(script2);
     }
+
+    // Load Calendly widget script
+    const calendlyScript = document.createElement('script');
+    calendlyScript.src = 'https://assets.calendly.com/assets/external/widget.js';
+    calendlyScript.async = true;
+    document.head.appendChild(calendlyScript);
+
+    return () => {
+      // Cleanup
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
   }, []);
+
+  // Reinitialize Calendly widget when modal opens
+  useEffect(() => {
+    if (showCalendar && window.Calendly) {
+      // Force a small delay to ensure the container is visible
+      setTimeout(() => {
+        window.Calendly.initInlineWidget({
+          url: CALENDLY_LINK,
+          parentElement: document.querySelector('.calendly-inline-widget'),
+          prefill: {},
+          utm: {}
+        });
+      }, 100);
+    }
+  }, [showCalendar]);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -978,37 +1007,22 @@ const LandingPage = () => {
             </div>
               <div className="p-6 overflow-y-auto" style={{ maxHeight: 'calc(90vh - 100px)' }}>
                 <div className="space-y-6">
-                  {/* Cal.com Embed */}
+                  {/* Calendly Embed */}
                   <div className="bg-white rounded-xl overflow-hidden shadow-lg">
                     <div className="bg-emerald-50 p-4 border-b border-emerald-100">
                       <h4 className="text-lg font-bold text-emerald-900 flex items-center gap-2">
                         <Calendar className="h-5 w-5" />
-                        Book via Cal.com
+                        Book via Calendly
                       </h4>
                       <p className="text-sm text-emerald-700">Select a time that works for you</p>
                     </div>
-                    <div className="p-4 bg-slate-50 text-center">
-                      <p className="text-slate-600 mb-4">
-                        Sign up at <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-semibold underline">cal.com</a> and update your username in the .env file
-                      </p>
-                      <p className="text-sm text-slate-500 mb-4">
-                        Current username: <strong>{CALCOM_USERNAME}</strong>
-                      </p>
-                      {/* Uncomment when you have Cal.com username */}
-                      {/* <iframe
-                        src={`https://cal.com/${CALCOM_USERNAME}/30min`}
-                        width="100%"
-                        height="600"
-                        frameBorder="0"
-                        title="Book a consultation"
-                      ></iframe> */}
-                      <Button 
-                        onClick={() => window.open(`https://cal.com/${CALCOM_USERNAME}`, '_blank')}
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white"
-                      >
-                        Open Cal.com Booking
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </Button>
+                    <div className="p-0">
+                      {/* Calendly Official Inline Widget */}
+                      <div 
+                        className="calendly-inline-widget" 
+                        data-url={CALENDLY_LINK}
+                        style={{ minWidth: '320px', height: '600px' }}
+                      ></div>
                     </div>
                   </div>
 
